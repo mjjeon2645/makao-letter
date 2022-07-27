@@ -1,0 +1,90 @@
+#slogan {
+    position: relative;
+    padding-top: 40vw;
+    border-bottom: 1px solid #000;
+    background-color: #FFF;
+    z-index: -100;
+}
+
+#slogan img {
+    position: absolute;
+    top: -14vw;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    width: 70vw;
+    z-index: -1;
+}
+
+#slogan .content {
+    padding: 5vw 0;
+    border-top: 1px solid #000;
+    text-align: center;
+    background-color: #4593FC;
+    z-index: 1;
+}
+
+h2, h2 strong {
+    font-size: 6vw;
+    line-height: 8.5vw;
+}
+
+h2 strong {
+    display: block;
+}
+
+@media (min-width: 600px) {
+    #slogan {
+        padding-top: 17em;
+    }
+
+    #slogan img {
+        top: -5.5em;
+        width: 30em;
+    }
+
+    #slogan .content {
+        padding: .5em 0;
+    }
+
+    h2 {
+        font-size: 1.6em;
+        line-height: 1.8em;
+    }
+
+    h2 strong {
+        font-size: 1em;
+        line-height: 1em;
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    #slogan {
+        position: relative;
+        padding-top: 17em;
+    }
+
+    #slogan img {
+        top: -5.5em;
+        width: 30em;
+    }
+
+    #slogan .content {
+        display: block;
+        padding: .5em 3em;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 3em;
+        line-height: 1.4em;
+        margin: 0 auto;
+        max-width: 1024px;
+    }
+    
+    h2 strong {
+        font-size: 1em;
+        line-height: 1em;
+        display: inline;
+    }
+}

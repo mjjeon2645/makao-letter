@@ -1,0 +1,72 @@
+header {
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    padding: 6.7vw 0;
+}
+
+header .logo {
+    font-size: 8vw;
+    color: #000;
+}
+
+header ul {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    header {
+        padding: 2em 1em;
+    }
+
+    header .logo {
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        position: relative;
+        justify-content: flex-end;
+        padding-inline: calc((100% - 1024px) / 2);
+    }
+
+    header h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    header ul {
+        display: flex;
+        align-items: center;
+    }
+
+    header button {
+        border: 1px solid #000;
+        text-indent: -10000px;
+        background-repeat: no-repeat;
+        width: 2em;
+        height: 2em;
+        background-size: 1.3em;
+        background-position: 50% 50%;
+        cursor: pointer;      
+    }
+
+    header button:hover {
+        background-color: #DDEBFC;
+    }
+
+    header button:active {
+        background-color: #FFF;
+    }
+
+    header .search button {
+        background-image: url(/images/search.png);
+    }
+
+    header .login button {
+        background-image: url(/images/user.png);
+    }
+}

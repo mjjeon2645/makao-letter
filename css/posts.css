@@ -1,0 +1,140 @@
+#posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 6vw 12vw 6vw;
+}
+
+#posts .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 12fr;
+    border-color: #000;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+}
+
+#posts .cards:first-child {
+    border-top: 0;
+}
+
+.card a {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 5fr 0.7fr;
+    grid-template-areas: 
+        "title title title"
+        "summary summary summary"
+        "time time reaction"
+    ;
+    padding: 5vw;
+    height: 94vw;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #000;
+    color: #000;
+}
+
+.card a:hover {
+    background-color: #DDEBFC;
+}
+
+.card a:active {
+    background-color: #FFF;
+}
+
+.title {
+    font-size: 4vw;
+    grid-area: title;
+}
+
+.summary {
+    font-size: 3.5vw;
+    grid-area: summary;
+    word-break: break-all;
+}
+
+#posts time {
+    font-size: 3.5vw;
+    line-height: 5.5vw;
+    grid-area: time;
+}
+
+.reaction {
+    font-size: 3.5vw;
+    grid-area: reaction;
+}
+
+.more {
+    font-size: 5vw;
+    margin: 8vw 0;
+    padding: 3vw 9vw;
+    border: 1px solid #000;
+    border-radius: 10vw;
+    color: #FFF;
+    background-color: #4593FC;
+}
+
+.more:hover {
+    color: #000;
+    background-color: #DDEBFC;
+}
+
+.more:active {
+    background-color: #4593FC;
+}
+
+@media (min-width:600px) {
+    #posts {
+        padding: 0 3em 5em 3em;
+    }
+    
+    #posts .cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+    }
+
+    .card a {
+        padding: 1em 1em 0 1em;
+        height: 19em;
+    }
+
+    .title {
+        font-size: 1em;
+    }
+
+    .summary {
+        font-size: 1em;
+    }
+
+    #posts time {
+        font-size: 0.8em;
+        line-height: 1em;
+    }
+
+    .reaction {
+        font-size: 0.8em;
+    }
+
+    .more {
+        font-size: 1.2em;
+        margin: 2.5em 0;
+        padding: 0.5em 2em;
+        border-radius: 2em;
+    }    
+}
+
+@media (min-width:900px) {
+    #posts .cards {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+@media (min-width:1024px) {
+    #posts .cards {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        max-width: 1024px;
+    }
+}

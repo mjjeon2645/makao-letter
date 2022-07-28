@@ -7,11 +7,11 @@
 
 #posts .cards {
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 12fr;
     border-color: #000;
     border-style: solid;
     border-width: 1px 0 0 1px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 12fr;
 }
 
 #posts .cards:first-child {
@@ -22,9 +22,10 @@
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 1fr 5fr 0.7fr;
-    grid-template-areas: "title title title"
-        "texts texts texts"
-        "time time like"
+    grid-template-areas: 
+        "title title title"
+        "summary summary summary"
+        "time time reaction"
     ;
     padding: 5vw;
     height: 94vw;
@@ -47,9 +48,9 @@
     grid-area: title;
 }
 
-.texts {
+.summary {
     font-size: 3.5vw;
-    grid-area: texts;
+    grid-area: summary;
     word-break: break-all;
 }
 
@@ -59,9 +60,9 @@
     grid-area: time;
 }
 
-.like {
+.reaction {
     font-size: 3.5vw;
-    grid-area: like;
+    grid-area: reaction;
 }
 
 .more {
@@ -83,7 +84,7 @@
     background-color: #4593FC;
 }
 
-@media (min-width: 600px) {
+@media (min-width:600px) {
     #posts {
         padding: 0 3em 5em 3em;
     }
@@ -123,14 +124,14 @@
     }    
 }
 
-@media (min-width: 900px) {
+@media (min-width:900px) {
     #posts .cards {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width:1024px) {
     #posts .cards {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);

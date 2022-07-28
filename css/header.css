@@ -8,6 +8,7 @@ header {
 header .logo {
     font-size: 8vw;
     color: #000;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
 }
 
 header ul {

@@ -64,10 +64,10 @@ header ul {
     }
 
     header .search button {
-        background-image: url(./images/search.png);
+        background-image: url(/images/search.png);
     }
 
     header .login button {
-        background-image: url(./images/user.png);
+        background-image: url(/images/user.png);
     }
 }
